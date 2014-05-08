@@ -20,6 +20,10 @@ set :relative_links, true
 # It's important HAML outputs "ugly" HTML to not mess with code blocks
 set :haml, :format => :html5, :ugly => true
 
+# turn on Sass plugins styling html lists
+require 'sassy_list' # colors lists bullets
+require 'SassyLists' # misc list manipulation stuff
+
 # Set Markdown features for RedCarpet
 # (So our version of Markdown resembles GitHub's)
 set :markdown,
@@ -39,13 +43,15 @@ set :markdown_engine, :redcarpet
 
 # Add an AsciiDoc filter to HAML
 # (Use ':asciidoc' for AsciiDoctor-powered blocks in HAML)
-Haml::Filters.register_tilt_filter "AsciiDoc"
+# commenting this out because it's broken and i have no idea why -mizmo
 
-set :asciidoc_attributes, %w(source-highlighter=coderay imagesdir=images)
+#Haml::Filters.register_tilt_filter "AsciiDoc"
 
-set :asciidoctor,
-  :toc => true,
-  :numbered => true
+#set :asciidoc_attributes, %w(source-highlighter=coderay imagesdir=images)
+
+#set :asciidoctor,
+#  :toc => true,
+#  :numbered => true
 
 # Set directories
 set :css_dir, 'stylesheets'

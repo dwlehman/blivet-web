@@ -1,6 +1,136 @@
+$darkgray:    #60605b
+$lightgray:   #e1e6e2
+$lightergray: #f9f9f9
+
+$bluegreen:   #619d9b
+
+$green:       #a8ae28
+$darkergreen: #999f24
+
+$callout:     #777
+$text:        #aaa
+
+
 header.masthead
-  text-align: center
+  text-align: left
 
   nav
-    max-width: 50%
     margin: 0 auto
+
+#branding h1 
+  text-align: left
+  width: 40%
+  float: left
+
+header#branding 
+  background-image: url('/images/pattern.png')
+  background-color: $darkgray
+  
+  h1, h2
+    margin-top: 0px
+
+#access
+  display: block
+  background:  $bluegreen
+
+  nav
+    max-width: 100%
+    font-size: 14pt
+    text-transform: uppercase
+
+    ul
+      line-height: 75px
+
+    a:link, a:visited
+      color: $lightgray
+
+  .active a:link
+    color: white
+    font-weight: Bold
+    
+
+  
+.title
+  height: 80px
+  margin: 40px 5%
+  padding: 0px 10%
+  color: white
+  background-color: $darkgray
+  width: 100%
+
+.index #subhead 
+  height: 210px
+  margin: 40px 5%
+  padding: 0px 10%
+  color: white
+
+  img
+    margin: auto 8%
+    float: left
+  
+  h2
+    font-size: 24pt
+    max-width: 90%
+    margin: auto auto
+   
+  button
+    margin-top: 30px
+    background: $green
+    color: white
+
+  button:hover
+    background: $darkergreen
+
+#content
+  font-size: 13pt
+  color: $callout
+  margin: auto 5%
+  
+  #about
+    font-size: 16pt
+
+  h2
+    color: #5f9a98
+    text-transform: uppercase
+    font-size: 14pt
+    margin-top: 2em
+    
+  #tech
+    margin-top: 3em
+    clear: both
+    height: 150px  
+    
+    ul
+      margin-top: .5em
+      @include sassy_list($green)
+      color: $text
+      float: left
+      margin-right: 50px
+
+  #featuring 
+    margin-top: 2em
+    width: 100%
+    text-align: center    
+    
+    .feature
+      background: $lightergray
+      color:      $text
+      float: left
+      margin-right: 3%
+      width: 30%
+      padding: 10px
+      text-align: center
+      font-size: small
+      min-height: 130px
+      vertical-align: middle
+      
+      img
+        margin: 12px 25%
+
+#footer
+  margin-top: 5em
+  margin-bottom: 2em
+
+.nav-pills li a:hover
+  background: none
+  color: $green !important

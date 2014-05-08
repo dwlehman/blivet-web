@@ -1,12 +1,12 @@
-name: Springboard for Middleman
-subhead: Static site construction kit
-domain: yourdomain.org
+name: Blivet
+subhead: Simplify the complexities of storage reliably and powerfully.
+domain: needadomain.org
 
 # Be sure to set up and install Juvia before enabling!
 #has_comments: true
 
 # Optional logo. If commented out, it will not be used.
-logo: logo.png
+logo: blivet-logo.png
 
 # optional, set to true if your site uses SSL by default
 #ssl: true
@@ -16,10 +16,10 @@ logo: logo.png
 #owner: Your Name or Company
 
 # The year your site was established (for the copyright)
-#founding_year: 2013 # Defaults to current year if commented
+founding_year: 2013 # Defaults to current year if commented
 
 # Manual copyright string, to override the automatic one
-#copyright: "&copy; 2013 YOUR_NAME_HERE"
+copyright: "&copy; 2014 YOUR_NAME_HERE"
 
 
 # Optional footer links
@@ -60,7 +60,7 @@ keywords:
 # add your user@host contained within your git repo. (You may also use
 # the entire git repo line).
 
-#openshift: 12fea2b4c1b98683b3eae078@site-user.rhcloud.com
+openshift: 53691c634382ecccfa000270@blivet-mairin.rhcloud.com/~/git/blivet.git/
 
 # If you'd rather use OpenShift via git instead of rsync, comment out
 # the above line and add your git URL as a 'production' remote.

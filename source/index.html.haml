@@ -2,6 +2,8 @@
 pageable: true
 ---
 
+
+
 - content_for :head do
   %link(href="/blog/feed.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
 
@@ -9,15 +11,65 @@ pageable: true
 
   -# First-page only stuff here
   -# (If a blog is included below, then it may paginate)
+  
+#about
 
-.row
+  Blivet is a free & open source python module for management of a 
+  system's storage configuration. It a reliable and powerful tool for 
+  dealing with the complexity and inconsistency of storage technologies 
+  in an elegant and simplified way. 
+  
+#tech
 
-  %section.blog-posts
+  %h2 Supported Storage Technologies & File Systems
+  
+  %ul
+    %li LVM
+    %li BTRFS
+    %li XFS
+  %ul
+    %li EXT 2/3/4
+    %li VFAT
+    %li LVM Thin Provisioning
+  %ul
+    %li Fibre Channel
+    %li DASD
+    %li FCoE
+  %ul  
+    %li CCISS
+    %li BIOS RAID
+    %li MD RAID
+  %ul  
+    %li Multipath devices
+    %li SANs
+    
+#featuring
 
-    %section.container
+  .feature
+    %a{href: "http://python.org"}
+      = image_tag('/images/logo-python.png')
+    Written in Python.
+    
+  .feature
+    %a{href: "https://www.gnu.org/licenses/lgpl-2.1.html"}
+      = image_tag('/images/logo-lgpl.png')
+    LGPL 2+ licensed.
+    
+  .feature
+    %a{href: "http://fedoraproject.org"}
+      = image_tag('/images/logo-fedora.png')
+    Part of the Fedora Project.
+    
+    
+/
+  .row
 
-      %h2
-        = data.site.name
-        News
+    %section.blog-posts
 
-      = partial :blog_posts, locals: locals
+      %section.container
+
+        %h2
+          = data.site.name
+          News
+
+        = partial :blog_posts, locals: locals

@@ -75,3 +75,7 @@ gem "wikicloth"
 gem "redcarpet"
 
 gem 'open-uri-cached'
+
+# Sass plugin thingys for styling html lists more easily
+gem 'sassy_list'   # for coloring bullets
+gem 'SassyLists'   # for list manipulation

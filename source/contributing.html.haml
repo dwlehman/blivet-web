@@ -1,0 +1,15 @@
+---
+layout: docs
+---
+
+- content_for :head do
+  %link(href="/blog/feed.xml" rel="alternate" title="Atom feed" type="application/atom+xml")
+
+- if defined? page_number && page_number < 2
+
+  -# First-page only stuff here
+  -# (If a blog is included below, then it may paginate)
+
+.title Contributing
+  
+Some stuff can go here.
