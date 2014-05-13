@@ -215,8 +215,8 @@ configure :build do
   ignore 'events-yaml*'
 
   # Minify JavaScript and CSS on build
-  activate :minify_javascript
-  activate :minify_css
+  #activate :minify_javascript
+  #activate :minify_css
   #activate :gzip
 
   # Force a browser reload for new content by using

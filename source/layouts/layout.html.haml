@@ -42,7 +42,10 @@
 
     - unless data.page.hide_header
       = partial "header"
-
+      - if page_classes.split(" ").include?("index")
+        = partial "subheader-front"
+      - else
+        = partial "subheader"
 
     %section#page-wrap.container
 
