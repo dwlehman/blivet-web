@@ -1,7 +1,5 @@
 #subhead  
-
-  - if data.site.subhead
-    %h2#site-title
-      = data.site.subhead
-     
-
+  %section
+    - if current_page.data.title
+      %h2#page-title
+        = current_page.data.title
