@@ -10,6 +10,8 @@ $darkergreen: #999f24
 $callout:     #777
 $text:        #aaa
 
+.nav > li > a
+  padding: 5px 10px
 
 header.masthead
   text-align: left
@@ -21,6 +23,7 @@ header.masthead
   min-height: 90px
   width: 100%
   background:  $bluegreen
+  overflow: hidden
 
   section
     max-width: 1170px
@@ -65,6 +68,7 @@ header.masthead
   background: $darkgray url('/images/pattern.png')
   text-align: left
   margin-bottom: 3em
+  overflow: hidden
   
   h2
     font-size: 24pt
@@ -82,7 +86,7 @@ header.masthead
   margin-top: 0px
   
   h2
-    width: 65% 
+    width: 75% 
     padding-left: 0px
   
   section
@@ -95,7 +99,7 @@ header.masthead
     margin-right: 50px
       
   button
-    margin-top: 30px
+    margin-top: 20px
     background: $green
     color: white
 
@@ -129,24 +133,40 @@ header.masthead
       margin-right: 50px
 
   #featuring 
-    margin-top: 2em
-    width: 100%
-    text-align: center    
-    
     .feature
-      background: $lightergray
-      color:      $text
-      float: left
-      margin-right: 3%
-      width: 30%
-      padding: 10px
-      text-align: center
-      font-size: small
+      width: 31.2%
+      float: left !important
+      margin-bottom: 30px
       min-height: 130px
-      vertical-align: middle
+      text-align: center
+      font-size: small 
+      padding-top: 12px
+      border: 10px solid white
+    
+    .python
+      background: $lightergray url('/images/logo-python.png') 50% 65% no-repeat
       
-      img
-        margin: 12px 25%
+    .lgpl
+      background: $lightergray url('/images/logo-lgpl.png') 50% 65% no-repeat
+  
+    .fedora
+      background: $lightergray url('/images/logo-fedora.png') 50% 65% no-repeat
+       
+#featuring .feature:nth-of-type(3n+1)
+  clear: left
+  margin-left: 0  
+  
+@media screen and (max-width:  783px) and (min-width: 501px)
+  #subhead h2
+    font-size: 16pt
+
+@media screen and (max-width:  500px)
+  #subhead h2
+    font-size: 10pt
+       
+
+
+
 
 #footer
   margin-top: 5em
