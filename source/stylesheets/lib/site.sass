@@ -173,14 +173,20 @@ body
     
   .index 
     #subhead
+      section
+        min-height: 200px
       img
         width: 20%
         height: 20%
+        margin: 5px
       h2
         font-size: 14pt  
         text-align: left
+        margin-bottom: 5px
       .right
         padding-left: 20px !important
         display: flex
-        flex-flow: column wrap
-        flex-basis: 50%
+        flex-flow: column no-wrap
+        flex-basis: 70%
+        float: right
+        width: 70% !important
