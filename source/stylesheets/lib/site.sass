@@ -46,6 +46,31 @@ nav
   button:hover
     background: $darkergreen
     
+#content
+  font-size: 140% 
+  color: $darkgray
+    
+  h2
+    color: $bluegreen
+    text-transform: uppercase
+    font-size: 17pt
+    margin-bottom: .5em
+    margin-top: 2em
+    
+  ul
+    margin-top: .5em
+    @include sassy_list($green)
+    color: $text
+
+#featuring
+  .feature
+    font-size: 10pt
+    padding: 10px
+    text-align: center
+    color: $text
+
+/*********/
+    
 @media screen and (max-width: $break-small)
   nav
     background-color: $darkgray
@@ -103,12 +128,13 @@ body
       padding-left: 100px
       
 .index #subhead
-  height: 210px
+  height: 250px
+  padding-top: 18px
 
   section
     display: flex
     margin: 0px auto
-    min-height: 100px
+    min-height: 180px
     flex-flow: row wrap
     justify-content: center
     
@@ -126,9 +152,44 @@ body
         padding: 0px !important
         
 #content
-  max-width: 800px
+  max-width: 880px
   padding: auto 25px
-/*********/
+  text-align: left
+  
+  #tech
+    display: flex
+    flex-direction: row
+    margin-bottom: 1em
+  ul
+    display: flex
+    flex-direction: column
+    margin-right: 25px
+    
+#featuring 
+  margin-top: 3em
+  margin-bottom: 1em
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+
+  .feature
+    min-height: 130px
+    min-width: 180px
+    margin: 5%
+    
+  .python
+    background: $lightergray url('/images/logo-python.png') 50% 65% no-repeat
+      
+  .lgpl
+    background: $lightergray url('/images/logo-lgpl.png') 50% 65% no-repeat
+  
+  .fedora
+    background: $lightergray url('/images/logo-fedora.png') 50% 65% no-repeat
+
+#footer
+  margin-top: 4em
+  margin-bottom: 1em
+
 /* Debug */
 
 /********************/
