@@ -1,5 +1,5 @@
 %header#branding.masthead.hidden-print(role="banner")
-  %section.hgroup
+  %section
     %h1
       = link_to "/" do
         - if data.site.logo
@@ -7,5 +7,4 @@
         - else
           = data.site.name
 
-    #access
-      = partial :nav, locals: { source: "navigation", nav_class: "nav-pills" }
+    = partial :nav, locals: { source: "navigation", nav_class: "" }

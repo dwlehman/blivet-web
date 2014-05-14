@@ -1,4 +1,13 @@
+$break-medium: 640px
+$break-small: 430px
+
+
+/*********************************************/
+/* Colors, Visual Tweaks, & Other Prettiness */
+
+/* Colors!! */
 $darkgray:    #60605b
+$darkergray:  #444
 $lightgray:   #e1e6e2
 $lightergray: #f9f9f9
 
@@ -10,196 +19,163 @@ $darkergreen: #999f24
 $callout:     #777
 $text:        #aaa
 
-.nav > li > a
-  padding: 5px 10px
-
-header.masthead
-  text-align: left
-
-  nav
-    margin: 0 auto
-
-#branding 
-  min-height: 90px
-  width: 100%
-  background:  $bluegreen
-  overflow: hidden
-
-  section
-    max-width: 1170px
-    margin-left: auto
-    margin-right: auto
-    
-  h1 
-    text-align: left
-    float: left
-  
-  h1, h2
-    margin-top: 0px
-    
-  img
-    margin: 20px 0px
-
-#access
-  display: block
-  width: 100%
-  text-align: right !important
-
-  nav
-    max-width: 100%
-    font-size: 14pt
-    text-transform: uppercase
-
-    ul
-      line-height: 75px
-      float: right
-
-    a:link, a:visited
+nav 
+  font-size: 14pt
+  ul
+    list-style: none
+  li
+    a, a:link, a:active, a:visited
+      color: white
+    a:hover
       color: $lightgray
-
-  .active a:link
-    color: white
-    font-weight: Bold
-   
+      text-decoration: none
+      
 #subhead
-  height: 100px
-  padding: 0px 10%
   color: white
   background: $darkgray url('/images/pattern.png')
-  text-align: left
-  margin-bottom: 3em
-  overflow: hidden
   
   h2
     font-size: 24pt
     margin: auto auto
-    padding-left: 25px
-
-  section
-    max-width: 1170px
-    margin: 0px auto
-    min-height: 100px
-    padding-top: 25px
-  
-.index #subhead 
-  height: 210px
-  margin-top: 0px
-  
-  h2
-    width: 75% 
-    padding-left: 0px
-  
-  section
-    max-height: 210px
-    max-width: 800px
-
-  
-  img
-    float: left
-    margin-right: 50px
-      
+    
+.index #subhead
   button
-    margin-top: 20px
     background: $green
     color: white
 
   button:hover
     background: $darkergreen
+    
+@media screen and (max-width: $break-small)
+  nav
+    background-color: $darkgray
+    order: 9 
+    li
+      width: 100%
+      border-top: 1px solid $darkergray  
+    li:last-child
+      border-top: 1px solid $darkergray  
+    li:hover
+      background-color: $darkergray
 
-#content
-  font-size: 13pt
-  color: $callout
-  margin: auto 5%
+/**********************/
+/* override nav stuff */
+
+nav 
+  ul
+    display: flex
+    flex-direction: row
+  li
+    margin-right: 1em
+
+
+/***************/
+/* Scaffolding */
+
+body 
+  display: flex
+  flex-direction: column
+
+#branding
+  background: $bluegreen
+  overflow: hidden
   
-  #about
-    font-size: 16pt
+  section
+    display: flex
+    margin: 0 auto
+    min-height: 90px
+    max-width: 1170px
+    flex-direction: row
+    justify-content: space-around
+    align-content: stretch
+    align-items: center
 
-  h2
-    color: #5f9a98
-    text-transform: uppercase
-    font-size: 14pt
-    margin-top: 2em
+#subhead
+  height: 100px
+  text-align: left
+  margin-bottom: 3em
+  section
+    max-width: 1000px !important
+    margin: 0 auto
+    padding-top: 25px
     
-  #tech
-    margin-top: 3em
-    clear: both
-    height: 150px  
-    
-    ul
-      margin-top: .5em
-      @include sassy_list($green)
-      color: $text
-      float: left
-      margin-right: 50px
-
-  #featuring 
-    .feature
-      width: 31.2%
-      float: left !important
-      margin-bottom: 30px
-      min-height: 130px
-      text-align: center
-      font-size: small 
-      padding-top: 12px
-      border: 10px solid white
-    
-    .python
-      background: $lightergray url('/images/logo-python.png') 50% 65% no-repeat
+    h2
+      padding-left: 100px
       
-    .lgpl
-      background: $lightergray url('/images/logo-lgpl.png') 50% 65% no-repeat
-  
-    .fedora
-      background: $lightergray url('/images/logo-fedora.png') 50% 65% no-repeat
-       
-#featuring .feature:nth-of-type(3n+1)
-  clear: left
-  margin-left: 0  
-  
-@media screen and (max-width:  783px) and (min-width: 551px)
+.index #subhead
+  height: 210px
 
-  #branding img
-    position: absolute
-    left: 30% !important
-
-  #subhead h2
-    font-size: 18pt
+  section
+    display: flex
+    margin: 0px auto
+    min-height: 100px
+    flex-flow: row wrap
+    justify-content: center
     
-  .index #subhead img
-    width: 20%
-    height: 20%
-    
-  #access
-    display: none !important 
-
-@media screen and (max-width:  550px)
-  #branding img
-    position: absolute
-    left: 20% !important
+    a
+      height: 50px
+      margin-top: 25px
+      
+    .right
+      display: flex
+      flex-flow: column wrap
+      flex-basis: 70%
+      padding-left: 50px
+      
+      h2
+        padding: 0px !important
         
-  #subhead h2
-    font-size: 15pt
-    
-  .index #subhead h2
-    width: 100%
-    
-  .index #subhead img
-    width: 25%
-    height: 25%
-    
-  #access
-    display: none !important 
+#content
+  max-width: 800px
+  padding: auto 25px
+/*********/
+/* Debug */
+
+/********************/
+/* Responsive Stuff */
+
+@media screen and (max-width: $break-medium) and (min-width: $break-small)
   
-  #featuring .feature
-    clear: left
-    margin-left: 0  
-    min-width: 90%
+  #branding section
+    flex-direction: column    
+    justify-content: center
+    align-content: center
+    align-items: center
+    
+  .index #subhead 
+    img
+      width: 20%
+      height: 20%
 
+    h2
+      font-size: 18pt
+    
+@media screen and (max-width: $break-small)
 
-#footer
-  margin-top: 5em
-  margin-bottom: 2em
+  #branding section
+    flex-wrap: wrap
 
-.nav-pills li a:hover
-  background: none
-  color: $green !important
+  nav 
+    width: 100%
+    padding
+    ul
+      padding: 0px
+      width: 100%
+      flex-direction: column
+      text-align: center
+      margin-bottom: 0px
+      
+  #subhead 
+    section 
+      h2
+        padding-left: 0px
+        text-align: center
+    
+  .index 
+    #subhead
+      img
+        width: 20%
+        height: 20%
+      h2
+        font-size: 14pt  
+        text-align: left
