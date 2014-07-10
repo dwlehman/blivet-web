@@ -1,5 +1,10 @@
 %header#subhead  
   %section
     - if current_page.data.title
+      -# Show "News" in the subheader for blog posts instead of showing the
+      -# article title twice.
       %h2#page-title
-        = current_page.data.title
+        - if current_article
+          = current_page.parent.data.title
+        - else
+          = current_page.data.title
