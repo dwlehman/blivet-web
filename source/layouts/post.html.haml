@@ -14,7 +14,6 @@
       - else
         = yield
 
-  -#
     .col-sm-4
 
       %aside
@@ -22,7 +21,7 @@
         %ol
           - blog.articles[0...10].each do |article|
             %li
-              = link_to article.title, article
+              = link_to article.title, article.url
               %span= pretty_date(article.date)
 
         %h3 Tags
@@ -33,6 +32,7 @@
               = link_to tag, tag_path(tag)
               (#{articles.size})
 
+      /
         %h3 By Year
         %ol
           - blog.articles.group_by {|a| a.date.year }.each do |year, articles|

@@ -1,0 +1,64 @@
+---
+title: About
+---
+
+%h2 About Blivet
+
+%p
+  Blivet is a free, open-source python module for configuring storage on Linux.
+  It was originally written as the storage backend for Anaconda -- the OS
+  installer used by
+  %a(href="http://fedoraproject.org") Fedora
+  and
+  = succeed ',' do
+    %a(href="http://www.redhat.com/products/enterprise-linux/") Red Hat Enterprise Linux
+  among others.
+
+%p
+  The main thing that makes Blivet stand apart from other storage configuration
+  tools is the ability to model an arbitrarily large set of changes in memory
+  without changing anything on disk. This makes it possible to specify your full
+  configuration before ever changing anything on disk instead of applying
+  changes as you define each layer.
+
+%p
+  Another powerful feature of Blivet is its DeviceFactory class hierarchy, which
+  allows creation of full device stacks with a single method call using a
+  top-down specification.
+
+%p
+  Blivet also features a powerful partitioning engine that can allocate new
+  partitions based on flexible specifications.
+
+%h2 Related Projects
+
+%ul
+  %li
+    %a(href="https://fedoraproject.org/wiki/Anaconda") Anaconda
+    = surround '(',')' do
+      %a(href="https://git.fedorahosted.org/git/anaconda.git") git
+    is the
+    %a(href="http://fedoraproject.org") Fedora
+    and
+    %a(href="http://www.redhat.com/products/enterprise-linux/") Red Hat Enterprise Linux
+    OS installer.
+
+  %li
+    Pykickstart
+    = surround '(',')' do
+      %a(href="https://git.fedorahosted.org/git/pykickstart.git") git
+    is a python module that provides the functionality known as kickstart.
+
+  %li
+    Libblockdev
+    = surround '(', ')' do
+      %a(href="https://github.com/vpodzime/libblockdev") git
+    is a new library being written to provide a mid-level storage API to be
+    shared by tools like Blivet,
+    = succeed ',' do
+      %a(href="http://www.openlmi.org") OpenLMI
+    = succeed ',' do
+      %a(href="http://cockpit-project.org") Cockpit
+    and others. It is still in a relatively early stage in its development, but
+    should be fully functional by the end of this summer.
+

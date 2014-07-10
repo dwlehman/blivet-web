@@ -1,6 +1,11 @@
 admin:
   name: Administrator
 
+dlehman:
+  name: David Lehman
+  description: |
+    Original author of blivet, now an aspiring web developer.
+
 example:
   name: Example Author Name
   twitter: example_twitter_person
