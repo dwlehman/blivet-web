@@ -55,6 +55,11 @@
     # If there's no link, call nav_header instead
     return nav_header(text) if link.nil?
 
+    # Prepend http_prefix to links that start with "/"
+    if link.start_with?("/")
+      link = link[1..-1].prepend(http_prefix)
+    end
+
     # Set the active class, if applicable
     active_class = normalize_url(link) == normalize_url(current_page.url) ? '.active' : ''
 

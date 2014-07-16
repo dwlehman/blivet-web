@@ -87,8 +87,7 @@
         %span.byline
           by
           %span.author.vcard
-            = author_link article.data.author
-
+            = link_to author_name(article.data.author), "#{http_prefix}blog/author/#{article.data.author.parameterize.downcase}/"
       &ndash;
 
       %time.published{datetime: article.date.iso8601}
@@ -144,6 +143,6 @@
         .author-blurb{class: with_photo ? 'with-photo' : ''}
           = author_card author
           .more-link
-            = author_link(author, "View all posts by #{author_name author} &raquo;")
+            = link_to "View all posts by #{author_name author} &raquo;", "#{http_prefix}blog/author/#{article.data.author.parameterize.downcase}/" 
 
     -# Share

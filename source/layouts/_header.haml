@@ -1,7 +1,7 @@
 %header#branding.masthead.hidden-print(role="banner")
   %section
     %h1
-      = link_to "/" do
+      = link_to http_prefix do
         - if data.site.logo
           = image_tag data.site.logo, id: "rhlogo", class: "logo", alt: data.site.name
         - else

@@ -4,7 +4,6 @@
 
 # Look in data/site.yml for general site configuration
 
-
 Time.zone = data.site.timezone || "UTC"
 
 # Automatic image dimensions on image_tag helper
@@ -226,6 +225,9 @@ configure :build do
 
   # Use relative URLs for all assets
   activate :relative_assets
+
+  # use project name as prefix for github project pages
+  set :http_prefix, "/#{data.site.name.downcase}/"
 
   # Make URLs relative
   #set :relative_links, true
