@@ -225,7 +225,10 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs for all assets
-  #activate :relative_assets
+  activate :relative_assets
+
+  # Make URLs relative
+  #set :relative_links, true
 
   # Compress PNGs after build
   # First: gem install middleman-smusher
