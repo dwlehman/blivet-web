@@ -46,14 +46,14 @@ pageable: true
 #featuring
 
   .feature.python
-    %a{href: "http://python.org"}
-      %img{src: "/images/logo-python.png"}
+    = link_to "http://python.org", :class=>"logo" do
+      = image_tag "/images/logo-python.png"
     
   .feature.lgpl
-    %a{href: "https://www.gnu.org/licenses/lgpl-2.1.html"}
-      %img{src: "/images/logo-lgpl.png"}
+    = link_to "https://www.gnu.org/licenses/lgpl-2.1.html", :class=>"logo" do
+      = image_tag "/images/logo-lgpl.png"
     
   .feature.fedora
-    %a{href: "http://fedoraproject.org"}
-      %img{src: "/images/logo-fedora.png"}
+    = link_to "http://fedoraproject.org", :class=>"logo" do
+      = image_tag "/images/logo-fedora.png"
 
