@@ -13,7 +13,7 @@ activate :automatic_image_sizes
 activate :syntax
 
 # Make URLs relative
-set :relative_links, true
+set :relative_links, false
 
 # Set HAML to render HTML5 by default (when unspecified)
 # It's important HAML outputs "ugly" HTML to not mess with code blocks
@@ -224,7 +224,7 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs for all assets
-  activate :relative_assets
+  #activate :relative_assets
 
   # use project name as prefix for github project pages
   set :http_prefix, "/#{data.site.name.downcase}/"
