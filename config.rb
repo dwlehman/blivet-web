@@ -83,7 +83,7 @@ activate :blog do |blog|
   blog.taglink = "tag/:tag.html"
 
   #blog.summary_separator = /(READMORE)/
-  #blog.summary_length = 99999
+  blog.summary_length = 250
 
   blog.paginate = true
   blog.per_page = 10
