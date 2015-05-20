@@ -1,10 +1,10 @@
 ~ wrap_layout :layout do
 
-  .row
+  %section.blog-post-page.row
 
-    .col-lg-10.col-lg-offset-1
+    .col-md-10.col-md-offset-1
 
-      - blog_post = current_page.data.date
+      - blog_post = defined? current_page.date
 
       - if blog_post
         = partial :blog_post, locals: {article: current_page}
@@ -14,7 +14,8 @@
       - else
         = yield
 
-    .col-sm-4
+  %section.row
+    .col-md-10.col-md-offset-1
 
       %aside
         %h3 Recent Articles
