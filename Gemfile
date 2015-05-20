@@ -7,10 +7,7 @@ gem "middleman", "~>3.2"
 # Live-reloading plugin
 gem "middleman-livereload"
 
-# Debugger / REPL alternative to irb
-gem 'pry'
-gem 'pry-debugger'
-gem 'pry-stack_explorer'
+gem "compass"
 
 # Cross-templating language block fix for Ruby 1.8
 platforms :mri_18 do
@@ -53,9 +50,7 @@ gem "oj"
 #####
 # Bootstrap
 
-# Bootstrap, as SASS 3 version (there's a bug in 3.0.1+, so we're
-# locking to 3.0.0 for now
-gem "bootstrap-sass", "3.0.0"
+gem "bootstrap-sass"
 
 
 #####
