@@ -8,3 +8,8 @@
           = data.site.name
 
     = partial :nav, locals: { source: "navigation", nav_class: "" }
+
+- if current_page.url == "/"
+  = partial "subheader-front"
+- else
+  = partial "subheader"
