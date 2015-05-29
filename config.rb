@@ -239,6 +239,9 @@ configure :build do
   activate :cache_buster
   # activate :asset_hash
 
+  # Set the site name as the http_prefix
+  set :http_prefix, "/#{data.site.name.downcase}/"
+
   # Use relative URLs for all assets
   # activate :relative_assets
 
