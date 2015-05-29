@@ -4,7 +4,17 @@ admin:
 dlehman:
   name: David Lehman
   description: |
-    Original author of blivet, now an aspiring web developer.
+    Author of blivet, member of anaconda development team.
+
+mulhern:
+  name: Anne Mulhern
+  description: |
+    Member of blivet and anaconda development teams, author of python-bytesize.
+
+vpodzime:
+  name: Vratislav Podzimek
+  description: |
+    Member of blivet and anaconda development teams, author of libblockdev.
 
 example:
   name: Example Author Name
