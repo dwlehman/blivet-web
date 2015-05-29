@@ -1,6 +1,6 @@
 name: Blivet
 subhead: Storage configuration simplified.
-domain: dwlehman.github.io
+domain: rhinstaller.github.io
 
 # Be sure to set up and install Juvia before enabling!
 #has_comments: true
