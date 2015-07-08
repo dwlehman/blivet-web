@@ -9,7 +9,7 @@
 
     = partial :nav, locals: { source: "navigation", nav_class: "" }
 
-- if current_page.url == "/"
+- if current_page.url == http_prefix
   = partial "subheader-front"
 - else
   = partial "subheader"
